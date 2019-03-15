@@ -1,0 +1,34 @@
+CXX=g++
+CXXFLAGS=-g -std=c++11
+BIN=lsh
+
+SRC= \
+	lsh_main.cpp \
+	utility.cpp \
+	h_family.cpp \
+	lsh.cpp
+
+OBJ= \
+	lsh_main.o \
+	utility.o \
+	h_family.o \
+	lsh.o
+
+all: $(OBJ)
+	$(CXX) $(OBJ) -o $(BIN)
+
+lsh_main.o: lsh_main.cpp
+	$(CXX) $(CXXFLAGS) -c lsh_main.cpp
+
+utility.o: utility.cpp
+	$(CXX) $(CXXFLAGS) -c utility.cpp
+
+h_family.o: h_family.cpp
+	$(CXX) $(CXXFLAGS) -c h_family.cpp
+
+lsh.o: lsh.cpp
+	$(CXX) $(CXXFLAGS) -c lsh.cpp
+
+
+clean:
+	rm -f *.o
