@@ -1,5 +1,6 @@
 # LSH
-Implementation of the LSH Nearest Neighbor Search algorithm using Eucledian metric and Cosine similarity
+Implementation of the LSH Nearest Neighbor and Range Search algorithm using Eucledian metric and Cosine similarity.  
+
 
 ## Compilation
 ~~~
